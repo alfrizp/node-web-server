@@ -18,7 +18,9 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/bad', (req, res) => {
-    res.send('This is error handling page');
+    res.send({
+        errorMessage: 'This is error handling page'
+    });
 });
 
 app.listen(3000);
