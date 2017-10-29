@@ -7,13 +7,10 @@ app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-    res.send({
-        name: 'Alif Rizki Pambudi',
-        likes: [
-            'Coding',
-            'Reading',
-            'Exploring something new'
-        ]
+    res.render('home.hbs', {
+        pageTitle: 'Home Page',
+        welcomeMessage: 'Welcome to Home Page',
+        currentYear: new Date().getFullYear()
     });
 })
 
